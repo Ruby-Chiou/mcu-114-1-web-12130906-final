@@ -1,13 +1,16 @@
+@use "./common";
+
 header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
   height: 70px;
   line-height: 70px;
   background-color: #fafafa;
+  padding-inline: 9vw;
 
   h3 {
     //標題樣式
     margin: 0px;
-
+    @include common.fontStyle(1.25rem, 700, 1.75rem);
     color: var(--primary-color);
   }
 }

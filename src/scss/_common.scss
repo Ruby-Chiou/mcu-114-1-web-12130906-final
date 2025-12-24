@@ -1,0 +1,12 @@
+@mixin buttonStyle {
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin fontStyle($size, $weight, $lineheight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineheight;
+}
+//mixin樣式整合按鈕與文字設計
