@@ -7,10 +7,32 @@ header {
   background-color: #fafafa;
   padding-inline: 9vw;
 
-  h3 {
+  .nav-name {
     //標題樣式
-    margin: 0px;
-    @include common.fontStyle(1.25rem, 700, 1.75rem);
-    color: var(--primary-color);
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: #1e9fab;
+    font-family: Poppins, sans-serif;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding-inline: 12vw;
+    gap: 6px;
+  }
+
+  div.button {
+    @include common.buttonStyle;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    //background-color: var(--gray-color-100);
+  }
+
+  button {
+    @include common.buttonStyle;
+    background-color: transparent;
+    color: #4b5563;
   }
 }
