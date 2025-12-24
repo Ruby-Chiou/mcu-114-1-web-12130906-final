@@ -1,0 +1,13 @@
+header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #fafafa;
+
+  h3 {
+    //標題樣式
+    margin: 0px;
+
+    color: var(--primary-color);
+  }
+}
