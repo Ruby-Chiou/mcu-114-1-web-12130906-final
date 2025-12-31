@@ -4,8 +4,9 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
   height: 90px;
   background-color: #fafafa;
-  padding-inline: 9vw;
-
+  width: 100%;
+  padding: 0 9vw;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +36,6 @@ header {
     color: #444444;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    white-space: nowrap;
 
     &:hover {
       color: #1e9fab;

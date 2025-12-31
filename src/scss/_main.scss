@@ -2,6 +2,7 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
   div {
     //書籍A的頁首、頁尾樣式
     &.container {
@@ -9,6 +10,8 @@ section {
       max-width: 1400px; // main 最大寬度
       margin: 0 auto;
       position: relative;
+
+      box-sizing: border-box;
 
       > div {
         width: 100%;
@@ -18,7 +21,24 @@ section {
       }
     }
   }
-  div.main {
-    flex-grow: 1;
+
+  main.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    > div {
+      outline: solid 1px red;
+
+      &.home {
+        height: 100vh;
+      }
+
+      &.page {
+        min-height: 550px;
+      }
+    }
   }
 }
