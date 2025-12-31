@@ -6,6 +6,8 @@ section {
     //書籍A的頁首、頁尾樣式
     &.container {
       width: 100%;
+      max-width: 1400px; // main 最大寬度
+      margin: 0 auto;
       position: relative;
 
       > div {

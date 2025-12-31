@@ -2,37 +2,71 @@
 
 header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
-  height: 70px;
-  line-height: 70px;
+  height: 90px;
   background-color: #fafafa;
   padding-inline: 9vw;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   .nav-name {
-    //標題樣式
     margin: 0;
+    padding: 0;
     font-size: 30px;
     font-weight: 600;
     color: #1e9fab;
-    font-family: Poppins, sans-serif;
   }
 
-  nav {
+  .center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  nav a {
+    @include common.buttonStyle;
+    color: #444444;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+
+    &:hover {
+      color: #1e9fab;
+    }
+  }
+
+  .button {
     display: flex;
     align-items: center;
-    padding-inline: 12vw;
-    gap: 6px;
-  }
+    gap: 0.5rem;
 
-  div.button {
-    @include common.buttonStyle;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    //background-color: var(--gray-color-100);
-  }
+    .btn {
+      @include common.buttonStyle;
+      font-weight: 500;
+      padding: 12px 20px;
+      background: rgb(239, 239, 239);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.4s;
+      color: #000;
 
-  button {
-    @include common.buttonStyle;
-    background-color: transparent;
-    color: #4b5563;
+      i {
+        margin-left: 10px;
+        font-size: 16px;
+      }
+
+      &:hover {
+        background: #1e9fab;
+        color: white;
+      }
+    }
   }
 }
