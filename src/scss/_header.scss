@@ -35,11 +35,8 @@ header {
     @include common.buttonStyle;
     color: #444444;
     text-decoration: none;
+    font-weight: 500;
     padding: 0.5rem 1rem;
-
-    &:hover {
-      color: #1e9fab;
-    }
   }
 
   .button {
@@ -64,7 +61,7 @@ header {
       }
 
       &:hover {
-        background: #1e9fab;
+        background: #00c9ff;
         color: white;
       }
     }
