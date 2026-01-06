@@ -28,16 +28,30 @@ section {
     box-sizing: border-box;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-inline: 10vw;
 
     > div {
-      outline: solid 1px red;
-
       &.home {
-        height: 100vh;
+        height: 80vh;
       }
 
       &.page {
         min-height: 550px;
+        outline: solid 1px red;
+        &.title {
+          margin-top: 1.5rem;
+          margin-bottom: 6rem;
+          text-align: center;
+
+          h2 {
+            margin: 0;
+            margin-bottom: 0.5rem;
+          }
+
+          strong {
+            color: var(--gray-color-500);
+          }
+        }
       }
     }
   }
