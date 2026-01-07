@@ -1,0 +1,52 @@
+@use "./common";
+
+div {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+
+    .item {
+      //劃線區塊
+      border: solid 1px #ccc;
+      border-radius: 30px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        display: none;
+      }
+
+      &:hover {
+        color: #285bd4;
+        border: solid 1px #285bd4;
+        i {
+          padding-top: 0.75rem;
+          display: block;
+        }
+      }
+      a {
+        //倆文字排版
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      strong {
+        font-weight: normal;
+        color: #444444;
+      }
+    }
+  }
+}

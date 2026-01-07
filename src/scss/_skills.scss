@@ -1,22 +1,6 @@
 @use "./common";
 //第三區塊顯示樣式
 div {
-  &.title {
-    text-align: center;
-    margin-bottom: 5em;
-
-    h1 {
-      font-weight: 600;
-      color: #444444;
-      margin-bottom: 10px;
-    }
-
-    strong {
-      font-weight: 400;
-      color: #999;
-    }
-  }
-
   &.skills {
     display: flex;
     width: 100%;

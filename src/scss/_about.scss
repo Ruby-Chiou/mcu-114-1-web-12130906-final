@@ -3,23 +3,23 @@
 .page {
   padding-block: 6em;
 
-  &#about {
-    .title {
-      text-align: center;
-      margin-bottom: 5em;
+  .title {
+    //標題與副標題文字樣式
+    text-align: center;
+    margin-bottom: 5em;
 
-      h1 {
-        @include common.fontStyle(2rem, 600, 1.2);
-        color: #444444;
-        margin-bottom: 10px;
-      }
-
-      strong {
-        @include common.fontStyle(1.125rem, 400, 1.5);
-        color: #999;
-      }
+    h1 {
+      @include common.fontStyle(2rem, 600, 1.2);
+      color: #444444;
+      margin-bottom: 10px;
     }
 
+    strong {
+      @include common.fontStyle(1.125rem, 400, 1.5);
+      color: #999;
+    }
+  }
+  &#about {
     .content {
       display: flex;
       flex-direction: row;
