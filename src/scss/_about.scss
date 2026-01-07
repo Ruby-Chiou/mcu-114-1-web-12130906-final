@@ -9,12 +9,13 @@
       margin-bottom: 5em;
 
       h1 {
-        font-weight: 600;
+        @include common.fontStyle(2rem, 600, 1.2);
         color: #444444;
         margin-bottom: 10px;
       }
 
       strong {
+        @include common.fontStyle(1.125rem, 400, 1.5);
         color: #999;
       }
     }
@@ -49,37 +50,42 @@
         }
 
         > div {
-          padding-inline: 1.5rem;
           @include common.fontStyle(15px, 400, 1.5rem);
-          color: #4b5563;
+          color: #777777;
         }
       }
     }
 
     .education {
-      position: relative;
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding-block: 30px 70px;
-      padding-inline: 20px;
       width: 50%;
-      //border-radius: 20px;
 
       h3 {
         margin-bottom: 15px;
-        font-weight: 600;
-        font-size: 20px;
+        @include common.fontStyle(20px, 600, 1.2);
         color: #444444;
       }
       .resume-item {
         width: 65%;
         display: flex;
         justify-content: space-between;
-        padding: 15px;
-        font-weight: bolder;
+        align-items: flex-start;
+        padding: 10px 25px;
         color: #444444;
         position: relative;
+        height: 24px;
+        line-height: 24px;
+
+        strong {
+          font-weight: 600;
+        }
+
+        strong:last-child {
+          font-weight: bolder;
+          text-align: right;
+        }
       }
 
       .resume-item::before {
@@ -87,7 +93,7 @@
         content: "";
         position: absolute;
         margin-top: 2px;
-        left: -8px;
+        left: 0;
         width: 16px;
         height: 16px;
         border-radius: 50px;

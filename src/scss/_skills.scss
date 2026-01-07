@@ -1,0 +1,49 @@
+@use "./common";
+//第三區塊顯示樣式
+div {
+  &.title {
+    text-align: center;
+    margin-bottom: 5em;
+
+    h1 {
+      font-weight: 600;
+      color: #444444;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      font-weight: 400;
+      color: #999;
+    }
+  }
+
+  &.skills {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex-basis: calc(50% - 20px);
+
+      .skill {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .progress {
+        height: 10px;
+        border: solid 1px #ccc;
+        //進度色塊
+        .progress-bar {
+          height: 10px;
+          background-color: #6e57e0;
+        }
+      }
+    }
+  }
+}
