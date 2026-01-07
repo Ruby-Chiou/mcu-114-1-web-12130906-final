@@ -10,6 +10,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 
   .nav-name {
     margin: 0;
@@ -63,6 +66,28 @@ header {
       &:hover {
         background: #00c9ff;
         color: white;
+      }
+    }
+  }
+  //導覽列樣式
+  nav {
+    display: flex;
+    gap: 1.5rem;
+
+    .active {
+      position: relative;
+      color: #6e57e0;
+      //定位點樣式設定
+
+      &::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: #6e57e0;
+        border-radius: 50%;
+        position: absolute;
+        left: calc(50% - 2.5px);
+        bottom: -8px;
       }
     }
   }
