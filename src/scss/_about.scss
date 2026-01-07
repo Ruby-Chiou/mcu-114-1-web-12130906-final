@@ -49,7 +49,7 @@
         }
 
         > div {
-          //padding-inline: 1.5rem;
+          padding-inline: 1.5rem;
           @include common.fontStyle(15px, 400, 1.5rem);
           color: #4b5563;
         }
