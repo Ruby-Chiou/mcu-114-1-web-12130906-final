@@ -1,18 +1,37 @@
 @use "./common";
+@use "./variables";
 
 header {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
-  height: 90px;
+  height: var(--header-height);
+  line-height: var(--header-height);
   background-color: #fafafa;
   width: 100%;
-  padding: 0 9vw;
+  padding-inline: 9vw;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
+  transition: all 0.3s ease;
+  z-index: 100;
+  transition: 0.3s;
+
+  // ✅ 動態陰影
+  box-shadow: var(--header-shadow, rgba(0, 0, 0, 0.1) 0px 1px 6px);
+
+  // ✅ 底部陰影線
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5px;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: var(--shadow-opacity, 0);
+    transition: opacity 0.3s ease;
+  }
 
   .nav-name {
     margin: 0;
@@ -30,16 +49,32 @@ header {
     nav {
       display: flex;
       align-items: center;
-      gap: 2rem;
-    }
-  }
+      gap: 3.4rem;
 
-  nav a {
-    @include common.buttonStyle;
-    color: #444444;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
+      a {
+        @include common.buttonStyle;
+        color: #444444;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .active {
+        position: relative;
+        color: #6e57e0;
+
+        &::after {
+          content: "";
+          width: 5px;
+          height: 5px;
+          background-color: #6e57e0;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          bottom: 23px;
+          transform: translateX(-40%);
+        }
+      }
+    }
   }
 
   .button {
@@ -51,10 +86,8 @@ header {
       @include common.buttonStyle;
       font-weight: 500;
       padding: 12px 20px;
-      background: rgb(239, 239, 239);
-      border: none;
+      background: #f0f0f0;
       border-radius: 10px;
-      cursor: pointer;
       transition: all 0.4s;
       color: #000;
 
@@ -66,28 +99,6 @@ header {
       &:hover {
         background: #00c9ff;
         color: white;
-      }
-    }
-  }
-  //導覽列樣式
-  nav {
-    display: flex;
-    gap: 1.5rem;
-
-    .active {
-      position: relative;
-      color: #6e57e0;
-      //定位點樣式設定
-
-      &::after {
-        content: "";
-        width: 5px;
-        height: 5px;
-        background-color: #6e57e0;
-        border-radius: 50%;
-        position: absolute;
-        left: calc(50% - 2.5px);
-        bottom: -8px;
       }
     }
   }

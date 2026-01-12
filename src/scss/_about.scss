@@ -72,24 +72,15 @@
       }
 
       .resume-item {
+        //教育程度區塊樣式
         width: 70%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         padding: 20px;
         color: #444444;
         position: relative;
-        height: 24px;
-        line-height: 24px;
-
-        strong {
-          font-weight: 700;
-        }
-
-        strong:last-child {
-          font-weight: 800;
-          text-align: right;
-        }
+        font-weight: 500;
       }
 
       .resume-item::before {
