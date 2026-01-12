@@ -30,10 +30,12 @@ function scrollHandler() {
     header.style.setProperty("--header-height", "70px");
     header.style.setProperty("--header-shadow", "0 1px 6px rgba(0,0,0,0.1)");
     header.style.setProperty("--shadow-opacity", "1");
+    document.documentElement.style.setProperty("--body-padding-top", "70px");
   } else {
     header.style.setProperty("--header-height", "90px");
     header.style.setProperty("--header-shadow", "none");
     header.style.setProperty("--shadow-opacity", "0");
+    document.documentElement.style.setProperty("--body-padding-top", "90px");
   }
 }
 

@@ -42,6 +42,7 @@ div.home {
 
           .blue-btn {
             background: #6e57e0;
+            font-weight: 600;
             color: white;
 
             &:hover {
@@ -52,7 +53,7 @@ div.home {
           button {
             @include common.buttonStyle;
             font-weight: 500;
-            padding: 12px 20px;
+            padding: 13px 20px;
             background: rgb(239, 239, 239);
             border: none;
             border-radius: 10px;
