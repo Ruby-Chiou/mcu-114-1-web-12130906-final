@@ -7,10 +7,9 @@ function openMenu() {
   }
 }
 
-const sections = document.querySelectorAll("div[id]"); // 你用 div，保持不變
+const sections = document.querySelectorAll("div[id]");
 
 function scrollHandler() {
-  // 1️⃣ 原有的 scrollActive 邏輯（球球左右移動）
   const scrollY = window.scrollY;
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
@@ -24,7 +23,7 @@ function scrollHandler() {
     }
   });
 
-  // 2️⃣ 新的高度 + 陰影邏輯
+  //新的高度+陰影邏輯
   const header = document.querySelector("header");
   if (window.scrollY > 5) {
     header.style.setProperty("--header-height", "70px");
@@ -43,7 +42,7 @@ let ticking = false;
 window.addEventListener("scroll", () => {
   if (!ticking) {
     requestAnimationFrame(() => {
-      scrollHandler(); // ✅ 呼叫合併函數
+      scrollHandler();
       ticking = false;
     });
     ticking = true;

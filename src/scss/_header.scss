@@ -6,7 +6,7 @@ header {
   line-height: var(--header-height);
   background-color: #fafafa;
   width: 100%;
-  padding-inline: 9vw;
+  padding-inline: 8.6vw;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ header {
     nav {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 3.5rem;
 
       a {
         @include common.buttonStyle;
