@@ -1,4 +1,5 @@
 @use "./main";
+@use "./color";
 @use "./variables";
 @use "./header";
 @use "./home";
@@ -12,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #fafafa;
+  background-color: var(--body-color);
   font-family: Poppins, sans-serif;
 }
 //卷軸順滑移動

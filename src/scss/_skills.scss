@@ -22,11 +22,12 @@ div {
 
       .progress {
         height: 10px;
-        border: solid 1px #ccc;
+        border: 1px solid var(--border-color);
+
         //進度色塊
         .progress-bar {
           height: 10px;
-          background-color: #6e57e0;
+          background-color: var(--first-color);
         }
       }
     }

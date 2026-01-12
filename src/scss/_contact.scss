@@ -8,7 +8,7 @@ div {
 
     .item {
       //劃線區塊
-      border: solid 1px #ccc;
+      border: 1px solid var(--border-color);
       border-radius: 30px;
       height: 200px;
       display: flex;
@@ -21,8 +21,8 @@ div {
       }
 
       &:hover {
-        color: #285bd4;
-        border: solid 1px #285bd4;
+        color: var(--first-color-hover);
+        border: 1px solid var(--first-color-hover);
         i {
           padding-top: 0.75rem;
           display: block;
@@ -48,7 +48,7 @@ div {
       strong {
         font-weight: normal;
         margin-top: 4px;
-        color: #444444;
+        color: var(--primary-text-color);
       }
     }
   }

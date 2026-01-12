@@ -4,7 +4,7 @@
 header {
   height: var(--header-height);
   line-height: var(--header-height);
-  background-color: #fafafa;
+  background-color: var(--body-color);
   width: 100%;
   padding-inline: 8.6vw;
   box-sizing: border-box;
@@ -15,10 +15,9 @@ header {
   top: 0;
   transition: all 0.3s ease;
   z-index: 100;
-  transition: 0.3s;
 
   // 動態陰影
-  box-shadow: var(--header-shadow, rgba(0, 0, 0, 0.1) 0px 1px 6px);
+  box-shadow: var(--header-shadow, var(--first-shadow-color) 0px 1px 6px);
 
   // 底部陰影線
   &::after {
@@ -28,7 +27,7 @@ header {
     left: 0;
     right: 0;
     height: 0.5px;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--first-shadow-color);
     opacity: var(--shadow-opacity, 0);
     transition: opacity 0.3s ease;
   }
@@ -54,7 +53,7 @@ header {
 
       a {
         @include common.buttonStyle;
-        color: #444444;
+        color: var(--primary-text-color);
         text-decoration: none;
         font-weight: 500;
       }
@@ -62,17 +61,18 @@ header {
       //動態追蹤球樣式
       .active {
         position: relative;
-        color: #6e57e0;
+        color: var(--first-color);
 
         &::after {
           content: "";
           width: 5px;
           height: 5px;
-          background-color: #6e57e0;
+          background-color: var(--first-color);
           border-radius: 50%;
           position: absolute;
-          left: calc(50% - 3px);
+          left: 50%;
           bottom: 25px;
+          transform: translateX(-50%);
         }
       }
     }
@@ -84,23 +84,7 @@ header {
     gap: 0.5rem;
 
     .btn {
-      @include common.buttonStyle;
-      font-weight: 500;
-      padding: 13px 20px;
-      background: #f0f0f0;
-      border-radius: 10px;
-      transition: all 0.4s;
-      color: #000;
-
-      i {
-        margin-left: 10px;
-        font-size: 16px;
-      }
-
-      &:hover {
-        background: #00c9ff;
-        color: white;
-      }
+      @include common.resumeButton;
     }
   }
 }
