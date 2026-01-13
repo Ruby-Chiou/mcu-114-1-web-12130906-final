@@ -43,7 +43,7 @@ header {
 
   .center {
     flex: 1;
-    display: flex;
+    display: var(--center-display);
     justify-content: center;
 
     nav {
@@ -79,7 +79,7 @@ header {
   }
 
   .button {
-    display: flex;
+    display: var(--button-display);
     align-items: center;
     gap: 0.5rem;
 

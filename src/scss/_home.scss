@@ -2,21 +2,40 @@
 
 div.home {
   display: flex;
+  flex-direction: var(--home-direction);
   justify-content: space-between;
+  gap: var(--home-gap, 3rem);
+  margin-top: var(--home-margin-top);
 
   > div {
-    width: 50%;
+    width: var(--home-width);
+
+    &.image {
+      display: flex;
+      justify-content: var(--img-justify);
+      align-items: center;
+      order: var(--img-order);
+      margin-top: var(--img-margin-top);
+
+      img {
+        width: var(--img-size); //圓的直徑
+        height: var(--img-size);
+        border-radius: 50%; //變圓
+        object-fit: cover;
+      }
+    }
 
     &.text {
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 80vh;
-      width: 50%;
-      padding-left: 20px;
+      min-height: var(--home-min-height);
+      width: var(--home-width);
+      padding-left: var(--home-text-padding-left);
 
       > span {
+        //姓名框樣式
         align-self: flex-start;
         background-color: #c0a631;
         color: var(--white-color);
@@ -26,8 +45,11 @@ div.home {
       }
 
       .featured-name {
-        @include common.fontStyle(3rem, 600, 1.75rem);
+        @include common.fontStyle(50px, 600, 1.75rem);
         color: var(--primary-text-color);
+        p {
+          margin-block: 45px;
+        }
       }
 
       strong {
@@ -60,9 +82,11 @@ div.home {
         }
 
         &.icons {
-          margin-top: 5em;
+          margin-top: var(--icons-margin-top);
           display: flex;
-          gap: 1.75em;
+          gap: 1.9em;
+          width: 100%;
+          text-align: center;
         }
 
         .icon {
@@ -73,19 +97,6 @@ div.home {
             color: var(--first-color);
           }
         }
-      }
-    }
-
-    &.image {
-      display: flex;
-      justify-content: right;
-      align-items: center;
-
-      img {
-        width: 380px; //圓的直徑
-        height: 380px;
-        border-radius: 50%; //變圓
-        object-fit: cover;
       }
     }
   }

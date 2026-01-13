@@ -4,4 +4,59 @@
   --header-height: 90px;
   --header-shadow: none;
   --shadow-opacity: 0;
+  //導覽列樣式變化
+  --center-display: flex;
+  --button-display: flex;
+  //首頁樣式變化
+  --img-size: 380px;
+  --img-justify: right;
+  --img-order: 0;
+  --home-direction: row;
+  --home-width: 50%;
+  --home-margin-top: 0;
+  --home-text-padding-left: 20px;
+  --home-text-align: left;
+  --home-min-height: 10vh;
+  --icons-margin-top: 5em;
+  --home-gap: 0;
+  --home-padding: 0px 20px 80px 20px;
+  // 關於我樣式控制
+  --about-flex-direction: row;
+  --about-introduce-width: 55%;
+  --about-education-width: 50%;
+  --about-content-justify: space-between;
+
+  @media (max-width: 1024px) {
+    //首頁樣式控制
+    --img-size: 320px;
+    --home-margin-top: 30px;
+    --home-text-padding-left: 0;
+    --home-padding: 30px 20px 150px 20px;
+  }
+
+  @media (max-width: 900px) {
+    //導覽列樣式控制
+    --center-display: none;
+    --button-display: none;
+    //首頁樣式控制
+    --img-size: 150px;
+    --img-justify: center;
+    --img-order: -1;
+    --img-margin-top: 7.5em;
+    --home-margin-top: 0;
+    --home-direction: column;
+    --home-width: 100%;
+    --home-text-padding-left: 0px;
+    --home-text-align: center;
+    --home-min-height: 60vh;
+    --icons-margin-top: 2em;
+    --home-gap: 0;
+    --home-text-align-items: center;
+    --home-padding: 30px 20px 50px 20px;
+    // 關於我樣式控制
+    --about-flex-direction: column;
+    --about-introduce-width: 100%;
+    --about-education-width: 100%;
+    --about-content-justify: center;
+  }
 }
