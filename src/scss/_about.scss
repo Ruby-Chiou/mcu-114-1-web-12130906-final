@@ -7,6 +7,7 @@
   }
 
   &#about {
+    margin-top: var(--about-margin-top);
     .content {
       display: flex;
       flex-direction: var(--about-flex-direction);
@@ -25,8 +26,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: var(--home-padding);
-        width: 93%;
+        padding: var(--about-padding);
+        width: var(--about-card-width);
         background: var(--white-color);
         box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
         border-radius: 20px;

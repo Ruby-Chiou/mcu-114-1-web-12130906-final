@@ -8,6 +8,7 @@
   --center-display: flex;
   --button-display: flex;
   //首頁樣式變化
+  --feature-size: 50px;
   --img-size: 380px;
   --img-justify: right;
   --img-order: 0;
@@ -19,19 +20,23 @@
   --home-min-height: 10vh;
   --icons-margin-top: 5em;
   --home-gap: 0;
-  --home-padding: 0px 20px 80px 20px;
   // 關於我樣式控制
+
+  --about-padding: 0px 20px 80px 20px;
   --about-flex-direction: row;
   --about-introduce-width: 55%;
   --about-education-width: 50%;
   --about-content-justify: space-between;
+  --about-card-width: 93%;
 
   @media (max-width: 1024px) {
     //首頁樣式控制
     --img-size: 320px;
     --home-margin-top: 30px;
     --home-text-padding-left: 0;
-    --home-padding: 30px 20px 150px 20px;
+    // 關於我樣式控制
+    --about-padding: 30px 20px 150px 20px;
+    --about-card-width: 90%;
   }
 
   @media (max-width: 900px) {
@@ -52,11 +57,21 @@
     --icons-margin-top: 2em;
     --home-gap: 0;
     --home-text-align-items: center;
-    --home-padding: 30px 20px 50px 20px;
     // 關於我樣式控制
+    --about-margin-top: 5rem;
+    --about-padding: 30px 20px 50px 20px;
     --about-flex-direction: column;
     --about-introduce-width: 100%;
     --about-education-width: 100%;
     --about-content-justify: center;
+    --about-card-width: 94%;
+  }
+
+  @media (max-width: 540px) {
+    //首頁樣式控制
+    --feature-size: 40px;
+    --about-padding: 30px 20px 70px 20px;
+    // 關於我樣式控制
+    --about-card-width: 90%;
   }
 }

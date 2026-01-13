@@ -45,10 +45,10 @@ div.home {
       }
 
       .featured-name {
-        @include common.fontStyle(50px, 600, 1.75rem);
+        @include common.fontStyle(var(--feature-size), 600, auto);
         color: var(--primary-text-color);
         p {
-          margin-block: 45px;
+          margin-block: 20px;
         }
       }
 
