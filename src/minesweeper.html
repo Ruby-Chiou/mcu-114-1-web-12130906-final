@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>踩地雷｜邱悅媗</title>
+    <link rel="stylesheet" href="style.min.css?v=4" />
+  </head>
+  <body class="mine">
+    <header class="top">
+      <a href="./index.html#contact">回作品集</a>
+      <strong>資工系物件導向技術期末專案</strong>
+    </header>
+    <main class="page">
+      <section class="intro">
+        <h1>踩地雷</h1>
+        <p>
+          這是資工系物件導向技術的 Java 期末專案，類別分成棋盤、地雷格和空格。這一頁用同一套分工改成網頁，可以直接玩，點格子時右邊會切到剛剛用到的程式。
+        </p>
+        <p>
+          原本的視窗和部分註解有用 AI 協助，類別分工、布雷和勝負是自己定的。網頁版另外補上空白格連開，以及第一下不會踩到地雷。
+        </p>
+        <div class="roles">
+          <button type="button" data-class="Tile">Tile<span>揭開與插旗</span></button>
+          <button type="button" data-class="MineTile">MineTile<span>踩到就結束</span></button>
+          <button type="button" data-class="EmptyTile">EmptyTile<span>數字與連開</span></button>
+          <button type="button" data-class="Minefield" class="is-active">Minefield<span>布雷與算數字</span></button>
+          <button type="button" data-class="GameManager">GameManager<span>剩餘地雷與紀錄</span></button>
+          <button type="button" data-class="calculateMines">難度<span>地雷數量比例</span></button>
+        </div>
+      </section>
+
+      <div class="stage">
+        <section class="panel play">
+          <div class="controls">
+            <label>邊長 5–35<input id="size" type="number" min="5" max="35" value="9" /></label>
+            <label>
+              難度
+              <select id="difficulty">
+                <option value="Easy">簡單</option>
+                <option value="Medium" selected>普通</option>
+                <option value="Hard">困難</option>
+                <option value="Extreme">極難</option>
+                <option value="Insane">地獄</option>
+              </select>
+            </label>
+            <button id="start" type="button">開始</button>
+            <button id="flagMode" type="button" data-on="false" aria-pressed="false">插旗</button>
+          </div>
+          <div class="status">
+            <span>剩餘地雷 <strong id="minesLeft">–</strong></span>
+            <span>時間 <strong id="elapsed">0:00</strong></span>
+          </div>
+          <p id="banner" class="banner" hidden></p>
+          <div class="board-wrap">
+            <div id="board" class="board" aria-label="踩地雷棋盤"></div>
+          </div>
+          <p class="hint">左鍵揭開，右鍵插旗。手機沒有右鍵時，先按「插旗」再點格子。</p>
+          <ol id="history" class="history" hidden></ol>
+        </section>
+
+        <section class="panel code">
+          <h2>背後的程式</h2>
+          <p id="trace">按下開始後，會先依地圖大小和難度決定地雷數。第一下落子才真正布雷。</p>
+          <div class="tabs">
+            <button class="tab is-active" type="button" data-class="Minefield">Minefield</button>
+            <button class="tab" type="button" data-class="Tile">Tile</button>
+            <button class="tab" type="button" data-class="EmptyTile">EmptyTile</button>
+            <button class="tab" type="button" data-class="MineTile">MineTile</button>
+            <button class="tab" type="button" data-class="GameManager">GameManager</button>
+            <button class="tab" type="button" data-class="calculateMines">難度</button>
+          </div>
+          <pre><code id="codeView">讀取程式中…</code></pre>
+        </section>
+      </div>
+    </main>
+    <script src="./minesweeper.js"></script>
+  </body>
+</html>

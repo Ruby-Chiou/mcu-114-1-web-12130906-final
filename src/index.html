@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>邱悅媗個人網站</title>
-    <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" href="style.min.css?v=4" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   </head>
 
@@ -21,6 +21,7 @@
               <nav>
                 <a href="#home" class="active">首頁</a>
                 <a href="#about">關於我</a>
+                <a href="#awards">證照</a>
                 <a href="#skills">技術</a>
                 <a href="#contact">作品集</a>
               </nav>
@@ -81,6 +82,65 @@
               </div>
             </div>
           </div>
+        </div>
+        <div id="awards" class="page">
+          <div class="title">
+            <h1>證照與獎項</h1>
+            <strong>學業成績與專業證照，點擊可看證明</strong>
+          </div>
+          <div class="award-grid">
+            <button
+              class="award-card"
+              type="button"
+              data-cert-images="./assets/awards/rank-112-1.jpg|./assets/awards/rank-112-2.jpg"
+              data-cert-captions="112 學年第 1 學期，學業成績全班第 2|112 學年第 2 學期，學業成績全班第 2"
+            >
+              <span class="award-kicker">學業成績</span>
+              <strong class="award-rank">第 2 名</strong>
+              <span class="award-meta">112 學年兩學期</span>
+              <span class="award-org">銘傳大學資訊管理學系</span>
+              <span class="award-open">查看兩張獎狀 <i class="fa-solid fa-magnifying-glass"></i></span>
+            </button>
+            <button
+              class="award-card"
+              type="button"
+              data-cert-images="./assets/awards/ipas.jpg"
+              data-cert-captions="經濟部 IPAS 資訊安全工程師，初級，2025/12"
+            >
+              <span class="award-kicker">經濟部 IPAS</span>
+              <strong>資訊安全工程師</strong>
+              <span class="award-meta">初級能力鑑定</span>
+              <span class="award-org">2025/12</span>
+              <span class="award-open">查看證書 <i class="fa-solid fa-magnifying-glass"></i></span>
+            </button>
+            <button
+              class="award-card"
+              type="button"
+              data-cert-images="./assets/awards/data-viz.jpg"
+              data-cert-captions="中華企業資源規劃學會，視覺化軟體應用師，2026/01"
+            >
+              <span class="award-kicker">中華企業資源規劃學會</span>
+              <strong>視覺化軟體應用師</strong>
+              <span class="award-meta">資料視覺化</span>
+              <span class="award-org">2026/01</span>
+              <span class="award-open">查看證書 <i class="fa-solid fa-magnifying-glass"></i></span>
+            </button>
+            <button
+              class="award-card"
+              type="button"
+              data-cert-images="./assets/awards/erp-sap.jpg"
+              data-cert-captions="中華企業資源規劃學會，ERP 配銷模組 SAP S/4HANA，2026/06"
+            >
+              <span class="award-kicker">中華企業資源規劃學會</span>
+              <strong>ERP 軟體應用師</strong>
+              <span class="award-meta">配銷模組 SAP S/4HANA</span>
+              <span class="award-org">2026/06</span>
+              <span class="award-open">查看證書 <i class="fa-solid fa-magnifying-glass"></i></span>
+            </button>
+          </div>
+          <p class="award-more">
+            另有 <button type="button" data-cert-images="./assets/awards/google-analytics.jpg" data-cert-captions="Google Analytics 分析認證，2025/12">Google Analytics 分析認證（2025/12）</button>、<button type="button" data-cert-images="./assets/awards/tqc-chinese.jpg" data-cert-captions="TQC 中文輸入進階級">TQC 中文輸入進階級</button>、<button type="button" data-cert-images="./assets/awards/club.jpg" data-cert-captions="113 學年桃園校區動漫同好社器材長">113 學年動漫同好社器材長</button>
+          </p>
         </div>
         <div id="skills" class="page">
           <div class="title">
@@ -146,9 +206,9 @@
           </div>
           <div class="grid">
             <div class="item">
-              <a href="./demo.html" target="_blank">
-                <h4>作品 1</h4>
-                <strong>主要實作網站切版</strong>
+              <a href="./minesweeper.html">
+                <h4>踩地雷</h4>
+                <strong>資工系物件導向技術，可玩也可看類別</strong>
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
             </div>
@@ -190,6 +250,7 @@
         <nav>
           <a href="#home">首頁</a>
           <a href="#about">關於我</a>
+          <a href="#awards">證照</a>
           <a href="#skills">技術</a>
           <a href="#contact">作品集</a>
         </nav>
@@ -202,6 +263,17 @@
         <div class="copy-right">Copyright &copy; 2025</div>
       </footer>
     </section>
+    <div class="cert-lightbox" role="dialog" aria-modal="true" aria-label="證明文件">
+      <button class="cert-close" type="button" aria-label="關閉">&times;</button>
+      <figure>
+        <div class="cert-stage">
+          <button class="cert-nav prev" type="button" aria-label="上一張" hidden>&lsaquo;</button>
+          <img alt="" />
+          <button class="cert-nav next" type="button" aria-label="下一張" hidden>&rsaquo;</button>
+        </div>
+        <figcaption></figcaption>
+      </figure>
+    </div>
     <script src="./main.js"></script>
     <!-- 追蹤定位點移動 -->
   </body>
