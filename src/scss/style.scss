@@ -1,3 +1,6 @@
+// 組合根：這一支只負責組裝，不寫具體畫面。
+// 新作品的頁面與程式放在 src/<作品>/，樣式另開一支 partial，再在這裡加一行 @use。
+// 頁面只連編譯後的 ../style.min.css。斷點與共用尺寸只寫在 _variables.scss，各 partial 用變數，不各自寫 @media。
 @use "./main";
 @use "./color";
 @use "./variables";
