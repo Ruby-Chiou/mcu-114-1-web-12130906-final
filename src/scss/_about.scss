@@ -10,24 +10,33 @@
     margin-top: var(--about-margin-top);
     .content {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: var(--about-flex-direction);
       justify-content: var(--about-content-justify);
-      align-items: center;
-      gap: 50px;
+      align-items: flex-start;
+      gap: 48px;
+      width: min(var(--about-content-max), 100%);
+      margin-inline: auto;
     }
 
     .introduce {
       //自我介紹卡片樣式設定
-      width: var(--about-introduce-width);
+      flex: 1 1 var(--about-introduce-width);
+      width: auto;
+      max-width: 100%;
+      min-width: min(100%, 18rem);
       padding: 0;
 
       div.card {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
         flex-direction: column;
+        box-sizing: border-box;
         padding: var(--about-padding);
         width: var(--about-card-width);
+        max-width: 100%;
+        margin-inline: auto;
         background: var(--white-color);
         box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
         border-radius: 20px;
@@ -35,14 +44,26 @@
 
         h3 {
           margin: 0 0 15px;
+          text-align: center;
           @include common.fontStyle(1.25rem, 600, 1rem);
           color: var(--primary-text-color);
         }
 
         > div {
-          @include common.fontStyle(15px, 400, 1.5rem);
+          width: 100%;
+          min-width: 0;
+          @include common.fontStyle(15px, 400, 1.7);
           padding-top: 10px;
           color: #777777;
+          overflow-wrap: break-word;
+
+          p {
+            margin: 0;
+          }
+
+          p + p {
+            margin-top: 12px;
+          }
         }
       }
     }
@@ -50,24 +71,41 @@
     .education {
       //教育程度區塊樣式
       display: flex;
-      align-items: center;
+      align-items: stretch;
       flex-direction: column;
+      box-sizing: border-box;
+      flex: 0 1 var(--about-education-width);
+      width: min(100%, var(--about-education-width));
+      max-width: 100%;
       padding-block: 30px 70px;
       padding-inline: 20px;
-      width: var(--about-education-width);
 
       h3 {
         margin: 0 0 15px;
+        text-align: center;
         @include common.fontStyle(20px, 600, 1.2);
         color: var(--primary-text-color);
       }
 
       .resume-item {
         //教育程度內文區塊樣式
-        width: 75%;
+        box-sizing: border-box;
+        width: 100%;
         display: flex;
+        flex-direction: var(--about-item-direction);
         justify-content: space-between;
         align-items: flex-start;
+        gap: 4px 16px;
+
+        strong:first-child {
+          flex: 1;
+          min-width: 0;
+        }
+
+        strong:last-child {
+          flex: none;
+          white-space: nowrap;
+        }
         font-size: 17px;
         padding: 15px;
         color: var(--primary-text-color);

@@ -8,7 +8,7 @@
   --center-display: flex;
   --button-display: flex;
   //首頁樣式變化
-  --feature-size: 50px;
+  --feature-size: 76px;
   --img-size: 380px;
   --img-justify: right;
   --img-order: 0;
@@ -22,12 +22,14 @@
   --home-gap: 0;
   // 關於我樣式控制
 
-  --about-padding: 0px 20px 80px 20px;
+  --about-padding: 28px 28px 32px;
   --about-flex-direction: row;
-  --about-introduce-width: 55%;
-  --about-education-width: 50%;
-  --about-content-justify: space-between;
-  --about-card-width: 93%;
+  --about-content-max: 1120px;
+  --about-introduce-width: 36rem;
+  --about-education-width: 28rem;
+  --about-content-justify: flex-start;
+  --about-card-width: 100%;
+  --about-item-direction: row;
   // 證照與獎狀
   --award-columns: repeat(4, minmax(0, 1fr));
   --lightbox-padding: 28px 76px;
@@ -55,8 +57,11 @@
     --home-margin-top: 30px;
     --home-text-padding-left: 0;
     // 關於我樣式控制
-    --about-padding: 30px 20px 150px 20px;
-    --about-card-width: 90%;
+    --about-padding: 28px 24px 32px;
+    --about-flex-direction: column;
+    --about-introduce-width: 100%;
+    --about-education-width: 100%;
+    --about-card-width: 100%;
     --award-columns: repeat(2, minmax(0, 1fr));
     --mine-page-width: min(1120px, calc(100% - 40px));
     --mine-stage-columns: minmax(240px, 1fr) minmax(260px, 1fr);
@@ -64,6 +69,7 @@
     --mine-code-height: 440px;
     --mine-brand-size: 0.92rem;
     --mine-title-size: 1.8rem;
+    --feature-size: 50px;
   }
 
   @media (max-width: 900px) {
@@ -91,7 +97,7 @@
     --about-introduce-width: 100%;
     --about-education-width: 100%;
     --about-content-justify: center;
-    --about-card-width: 94%;
+    --about-card-width: 100%;
     --mine-stage-columns: 1fr;
     --mine-top-pad: 16px 20px;
     --mine-page-pad: 24px 0 48px;
@@ -108,7 +114,7 @@
     --feature-size: 40px;
     --about-padding: 30px 20px 70px 20px;
     // 關於我樣式控制
-    --about-card-width: 90%;
+    --about-card-width: 100%;
     --award-columns: 1fr;
     --lightbox-padding: 64px 16px 24px;
     --lightbox-nav-left: 8px;
@@ -123,5 +129,6 @@
     --mine-panel-pad: 14px;
     --mine-page-width: calc(100% - 24px);
     --mine-role-basis: calc(50% - 8px);
+    --about-item-direction: column;
   }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>邱悅媗個人網站</title>
-    <link rel="stylesheet" href="style.min.css?v=4" />
+    <link rel="stylesheet" href="style.min.css?v=12" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   </head>
 
@@ -37,48 +37,76 @@
       <main class="wrapper">
         <div id="home" class="home">
           <div class="text">
-            <span>邱悅媗 (Ruby)</span>
+            <span>Ruby Chiou</span>
             <div class="featured-name">
-              <p>我是資管系學生</p>
+              <p>我是邱悅媗</p>
             </div>
-            <strong>我來自銘傳大學資訊管理學系，目前就讀三年級，今年20歲。</strong>
+            <strong>我來自銘傳大學資訊管理學系，目前就讀四年級，今年21歲。</strong>
             <div class="button">
-              <button class="blue-btn" type="button">Hire Me</button>
+              <a class="blue-btn" href="#contact">查看作品 <i class="fa-regular fa-file-code"></i></a>
               <button class="btn">下載履歷 <i class="fa-regular fa-file-pdf"></i></button>
             </div>
             <div class="icons">
-              <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-              <div class="icon"><i class="fa-brands fa-discord"></i></div>
-              <div class="icon"><i class="fa-brands fa-facebook"></i></div>
-              <div class="icon"><i class="fa-brands fa-github"></i></div>
+              <a
+                class="icon"
+                href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=12130906@me.mcu.edu.tw"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="用 Gmail 寄信給邱悅媗"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <span>12130906@me.mcu.edu.tw</span>
+              </a>
+              <a
+                class="icon"
+                href="https://eportfolio.mcu.edu.tw/ePortfolio/Student/page02/index.asp?ID=12130906"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="銘傳 ePortfolio"
+              >
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>銘傳學生個人學習歷程網站</span>
+              </a>
+              <a class="icon" href="https://github.com/Ruby-Chiou" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>Github個人雲端程式庫</span>
+              </a>
             </div>
           </div>
           <div class="image">
-            <img src="./assets/images/784SE5cc.jpeg" alt="" srcset="" />
+            <img src="./assets/images/IMG_20261003_111622_MP.jpg" alt="" srcset="" />
           </div>
         </div>
         <div id="about" class="page">
           <div class="title">
             <h1>關於我</h1>
-            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, minus?</strong>
+            <strong>立志朝著成為資安工程師的方向前進。</strong>
           </div>
           <div class="content">
             <div class="introduce">
               <div class="card">
                 <h3>自我介紹</h3>
-                <div>我擅長 Java 和 Power BI ，我有兩張專業證照，初級資訊安全工程師與視覺畫軟體應用師，我還在努力學習當中。</div>
+                <div>
+                  <p>
+                    我擅長 Java 和 Power
+                    BI，還有寫前端網頁，我有三張專業證照，初級資訊安全工程師、視覺畫軟體應用師與ERP軟體應用師，我還在努力學習當中。
+                  </p>
+                  <p>
+                    喜歡ACG跟TRPG，也很喜歡解謎、邏輯動腦類的事物，玩過很多次實體店的密室逃脫。曾經擔任過本校動漫同好社的幹部，籌辦過多場社課活動，例如:期初期末大會、迎新、萬聖節大會、密室逃脫、漫畫介紹分享與台灣KOL分享等一系列大小不一的社課。累積超過一百名社員共相參與，曾經最高社員參與紀錄人數為50名已有簽到人數，該社課為113學年上學期10/8舉辦的密室逃脫遊玩體驗社課。
+                  </p>
+                </div>
               </div>
             </div>
             <div class="education">
               <h3>教育程度</h3>
               <div class="resume-item">
-                <strong>xxx大學 資訊管理系 碩士</strong>
-                <strong>2027/9 ~ 2029/6</strong>
+                <strong>銘傳大學 資訊管理系 學士</strong>
+                <strong>2023/9 ~ 2027/6</strong>
               </div>
 
               <div class="resume-item">
-                <strong>銘傳大學 資訊管理系 學士</strong>
-                <strong>2022/9 ~ 2027/6</strong>
+                <strong>基隆女中 普通科</strong>
+                <strong>2020/9 ~ 2023/6</strong>
               </div>
             </div>
           </div>
@@ -231,9 +259,11 @@
             </div>
 
             <div class="item">
-              <h4>作品 2</h4>
-              <strong>主要實作網站切版</strong>
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <h4>電商網站</h4>
+              <a href="https://ruby-chiou.github.io/mcu-114-1-web-12130906/">
+                <strong>動態網頁程式設計，scss實作</strong>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
             </div>
 
             <div class="item">
@@ -272,12 +302,34 @@
           <a href="#contact">作品集</a>
         </nav>
         <div class="icons">
-          <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-          <div class="icon"><i class="fa-brands fa-discord"></i></div>
-          <div class="icon"><i class="fa-brands fa-facebook"></i></div>
-          <div class="icon"><i class="fa-brands fa-github"></i></div>
+          <div class="icons">
+            <a
+              class="icon"
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=12130906@me.mcu.edu.tw"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="用 Gmail 寄信給邱悅媗"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <div class="icon">
+              <a
+                class="icon"
+                href="https://eportfolio.mcu.edu.tw/ePortfolio/Student/page02/index.asp?ID=12130906"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ePortfolio"
+              >
+                <i class="fa-solid fa-user-graduate"></i>
+              </a>
+            </div>
+            <a class="icon" href="https://github.com/Ruby-Chiou" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
         </div>
-        <div class="copy-right">Copyright &copy; 2025</div>
+        <div class="copy-right">Copyright &copy; 2026</div>
       </footer>
     </section>
     <div class="cert-lightbox" role="dialog" aria-modal="true" aria-label="證明文件">
