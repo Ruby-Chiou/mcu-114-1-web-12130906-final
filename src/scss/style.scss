@@ -11,9 +11,9 @@
 @use "./skills";
 @use "./contact";
 @use "./footer";
-@use "./minesweeper";
-@use "./ecweb";
-@use "./kimetsu";
+@use "../minesweeper/minesweeper";
+@use "../ecweb/ecweb";
+@use "../kimetsu/kimetsu";
 
 html,
 body {

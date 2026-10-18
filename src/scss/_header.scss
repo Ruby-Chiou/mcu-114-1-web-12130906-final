@@ -85,6 +85,12 @@ header {
 
     .btn {
       @include common.resumeButton;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      box-sizing: border-box;
+      line-height: 1.2;
     }
   }
 }
