@@ -53,20 +53,28 @@ body.mine {
     padding: var(--mine-page-pad);
   }
 
-  .intro h1 {
-    margin: 0 0 8px;
-    font-size: var(--mine-title-size);
+  .intro-head {
+    display: grid;
+    grid-template-columns: var(--mine-intro-columns);
+    align-items: start;
+    gap: var(--mine-intro-gap);
   }
 
-  .intro p {
+  .intro h1 {
     margin: 0;
-    max-width: 68ch;
-    line-height: 1.7;
+    font-size: var(--mine-title-size);
+    line-height: 1.3;
+  }
+
+  .intro .lede p {
+    margin: 0;
+    max-width: none;
+    line-height: 1.75;
     color: #6f6a78;
   }
 
-  .intro p + p {
-    margin-top: 8px;
+  .intro .lede p + p {
+    margin-top: 10px;
   }
 
   .roles {

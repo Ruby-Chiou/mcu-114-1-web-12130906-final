@@ -8,7 +8,7 @@
   --center-display: flex;
   --button-display: flex;
   //首頁樣式變化
-  --feature-size: 76px;
+  --feature-size: 50px;
   --img-size: 380px;
   --img-justify: right;
   --img-order: 0;
@@ -32,6 +32,9 @@
   --about-item-direction: row;
   // 證照與獎狀
   --award-columns: repeat(4, minmax(0, 1fr));
+  --portfolio-columns: repeat(3, minmax(0, 1fr));
+  --portfolio-gap: 14px;
+  --portfolio-item-pad: 28px 24px;
   --lightbox-padding: 28px 76px;
   --lightbox-nav-left: 12px;
   --lightbox-nav-right: 12px;
@@ -50,6 +53,38 @@
   --mine-cell: 36px;
   --mine-code-height: 520px;
   --mine-panel-pad: 18px;
+  --mine-intro-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  --mine-intro-gap: 20px 40px;
+  // 電商平台
+  --ec-page-width: min(1120px, calc(100% - 8vw));
+  --ec-page-pad: 36px 0 64px;
+  --ec-top-direction: row;
+  --ec-top-align: center;
+  --ec-top-pad: 18px 6vw;
+  --ec-brand-size: 1rem;
+  --ec-brand-align: right;
+  --ec-title-size: 2rem;
+  --ec-shot-columns: 1fr 1fr;
+  --ec-flow-columns: repeat(3, minmax(0, 1fr));
+  --ec-intro-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  --ec-intro-gap: 20px 40px;
+  // 鬼滅周邊分析
+  --kz-page-width: min(1120px, calc(100% - 8vw));
+  --kz-page-pad: 36px 0 64px;
+  --kz-top-direction: row;
+  --kz-top-align: center;
+  --kz-top-pad: 18px 6vw;
+  --kz-brand-size: 1rem;
+  --kz-brand-align: right;
+  --kz-title-size: 2rem;
+  --kz-flow-columns: repeat(4, minmax(0, 1fr));
+  --kz-find-columns: 1fr 1fr;
+  --kz-team-columns: repeat(3, minmax(0, 1fr));
+  --kz-shot-columns: 1fr 1fr;
+  --kz-hero-min-height: 320px;
+  --kz-hero-pad: 48px 52px;
+  --kz-hero-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  --kz-hero-gap: 28px 40px;
 
   @media (max-width: 1024px) {
     //首頁樣式控制
@@ -63,6 +98,8 @@
     --about-education-width: 100%;
     --about-card-width: 100%;
     --award-columns: repeat(2, minmax(0, 1fr));
+    --portfolio-columns: repeat(3, minmax(0, 1fr));
+    --portfolio-item-pad: 26px 22px;
     --mine-page-width: min(1120px, calc(100% - 40px));
     --mine-stage-columns: minmax(240px, 1fr) minmax(260px, 1fr);
     --mine-cell: 32px;
@@ -70,6 +107,8 @@
     --mine-brand-size: 0.92rem;
     --mine-title-size: 1.8rem;
     --feature-size: 50px;
+    --kz-flow-columns: 1fr 1fr;
+    --kz-page-width: min(1120px, calc(100% - 40px));
   }
 
   @media (max-width: 900px) {
@@ -98,11 +137,36 @@
     --about-education-width: 100%;
     --about-content-justify: center;
     --about-card-width: 100%;
+    --portfolio-columns: repeat(2, minmax(0, 1fr));
+    --portfolio-gap: 12px;
+    --portfolio-item-pad: 24px 20px;
     --mine-stage-columns: 1fr;
     --mine-top-pad: 16px 20px;
     --mine-page-pad: 24px 0 48px;
     --mine-page-width: calc(100% - 32px);
     --mine-cell: 30px;
+    --ec-shot-columns: 1fr;
+    --ec-flow-columns: 1fr;
+    --ec-intro-columns: 1fr;
+    --ec-intro-gap: 12px;
+    --mine-intro-columns: 1fr;
+    --mine-intro-gap: 12px;
+    --ec-top-pad: 16px 20px;
+    --ec-page-pad: 24px 0 48px;
+    --ec-page-width: calc(100% - 32px);
+    --ec-title-size: 1.8rem;
+    --kz-top-pad: 16px 20px;
+    --kz-page-pad: 24px 0 48px;
+    --kz-page-width: calc(100% - 32px);
+    --kz-title-size: 1.8rem;
+    --kz-flow-columns: 1fr 1fr;
+    --kz-find-columns: 1fr;
+    --kz-team-columns: 1fr;
+    --kz-shot-columns: 1fr;
+    --kz-hero-min-height: 280px;
+    --kz-hero-pad: 32px 28px;
+    --kz-hero-columns: 1fr;
+    --kz-hero-gap: 14px;
     --mine-code-height: 340px;
     --mine-role-basis: calc(50% - 10px);
     --mine-role-grow: 1;
@@ -116,6 +180,8 @@
     // 關於我樣式控制
     --about-card-width: 100%;
     --award-columns: 1fr;
+    --portfolio-columns: 1fr;
+    --portfolio-item-pad: 22px 18px;
     --lightbox-padding: 64px 16px 24px;
     --lightbox-nav-left: 8px;
     --lightbox-nav-right: 8px;
@@ -129,6 +195,21 @@
     --mine-panel-pad: 14px;
     --mine-page-width: calc(100% - 24px);
     --mine-role-basis: calc(50% - 8px);
+    --ec-title-size: 1.6rem;
+    --ec-top-direction: column;
+    --ec-top-align: flex-start;
+    --ec-brand-align: left;
+    --ec-brand-size: 0.92rem;
+    --ec-page-width: calc(100% - 24px);
+    --kz-title-size: 1.6rem;
+    --kz-top-direction: column;
+    --kz-top-align: flex-start;
+    --kz-brand-align: left;
+    --kz-brand-size: 0.92rem;
+    --kz-page-width: calc(100% - 24px);
+    --kz-flow-columns: 1fr;
+    --kz-hero-min-height: 220px;
+    --kz-hero-pad: 24px 20px;
     --about-item-direction: column;
   }
 }

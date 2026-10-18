@@ -3,20 +3,22 @@
 div {
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
-    gap: 10px;
+    grid-template-columns: var(--portfolio-columns);
+    gap: var(--portfolio-gap);
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 
     .item {
-      //劃線區塊
       border: 1px solid var(--border-color);
       border-radius: 30px;
-      height: 200px;
+      min-height: 200px;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: var(--portfolio-item-pad);
+      box-sizing: border-box;
 
       i {
         display: none;
@@ -32,24 +34,31 @@ div {
       }
 
       a {
-        //倆文字排版
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: 100%;
         text-decoration: none;
         color: inherit;
+        text-align: center;
       }
 
       h4 {
         margin: 0;
-        margin-top: -2.5px;
         font-size: 1.5rem;
+        line-height: 1.35;
+        text-align: center;
       }
 
       strong {
+        display: block;
         font-weight: normal;
-        margin-top: 4px;
+        margin-top: 8px;
+        padding-inline: 4px;
+        line-height: 1.45;
+        text-align: center;
         color: var(--primary-text-color);
       }
     }

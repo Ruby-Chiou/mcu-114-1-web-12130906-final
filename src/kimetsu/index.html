@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日漫與鬼滅周邊客群分析｜邱悅媗</title>
+    <link rel="stylesheet" href="../style.min.css?v=18" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  </head>
+  <body class="kimetsu">
+    <header class="top">
+      <a href="../index.html#contact">回作品集</a>
+      <strong>大一人工智慧概論｜小組期末報告</strong>
+    </header>
+    <main class="page">
+      <section class="intro">
+        <div class="hero">
+          <img class="hero-bg" src="../assets/kimetsu/cover.jpg" alt="" aria-hidden="true" />
+          <div class="hero-copy">
+            <h1>尋找日漫與鬼滅周邊的消費客群與產品傾向</h1>
+            <p>
+              這是大一人工智慧概論的小組期末報告。我們用問卷蒐集日漫與《鬼滅之刃》周邊消費資料，再以 Weka 做 Apriori
+              關聯規則與 K-means 分群，找出較有購買意願的客群，以及不同群體偏好的周邊種類。
+            </p>
+          </div>
+        </div>
+        <p>
+          原始問卷約 152 筆；關聯分析與分群前會再做欄位轉換與篩選。這頁整理研究流程、重點發現與小組分工，完整書面報告可下載 PDF。
+        </p>
+        <div class="actions">
+          <a class="download" href="../assets/kimetsu/report.pdf" download="尋找日漫與鬼滅周邊的消費客群與產品傾向.pdf">
+            下載原報告 PDF <i class="fa-regular fa-file-pdf"></i>
+          </a>
+        </div>
+      </section>
+
+      <h2 class="section-title">研究流程</h2>
+      <section class="flow" aria-label="研究流程">
+        <article>
+          <span>01</span>
+          <h2>問卷蒐集</h2>
+          <p>2021 年自發問卷，收約 152 筆。問性別、年齡、日漫觀看、鬼滅知曉與觀感、周邊購買等。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>資料前處理</h2>
+          <p>轉成 Weka 可讀的名義變數，拆商品類型欄位，刪除空白與過度重複規則後的資料。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>關聯規則</h2>
+          <p>Apriori 找出高可信度規則，用來判斷哪些條件較常對應「會買／不買周邊」。</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h2>客群分群</h2>
+          <p>SimpleKMeans 分成 5 群，對照各群在飾品、藝術品、文具等商品上的偏好差異。</p>
+        </article>
+      </section>
+
+      <h2 class="section-title">重點發現</h2>
+      <section class="findings" aria-label="重點發現">
+        <article>
+          <span>關聯規則</span>
+          <h2>誰比較值得推銷</h2>
+          <p>
+            整理後較有購買訊號的是：買過約 1～5 個動漫周邊的女高中生，以及每年固定看很多部日漫且喜歡鬼滅的女性。對鬼滅無感、幾乎不看日漫的人，推銷鬼滅周邊成功率較低。
+          </p>
+        </article>
+        <article>
+          <span>K-means 五群</span>
+          <h2>喜歡什麼商品</h2>
+          <p>
+            有購買意願的群體多為 15～18 歲女性，平均花費多在 499 元內。分群 1 偏小飾品，分群 3 偏藝術品（公仔、娃娃等），分群 4 偏文具與小飾品；也有喜歡鬼滅但不打算再買的群體。
+          </p>
+        </article>
+      </section>
+
+      <h2 class="section-title">分析畫面</h2>
+      <section class="shots" aria-label="分析畫面">
+        <button class="shot" type="button">
+          <img src="../assets/kimetsu/weka-data.jpg" alt="Weka 前處理畫面，顯示屬性與性別分布" />
+          <span>Weka 前處理與屬性分布</span>
+        </button>
+        <button class="shot" type="button">
+          <img src="../assets/kimetsu/apriori.jpg" alt="Weka Apriori 關聯規則輸出" />
+          <span>Apriori 關聯規則結果</span>
+        </button>
+        <button class="shot" type="button">
+          <img src="../assets/kimetsu/kmeans.jpg" alt="Weka SimpleKMeans 五群中心結果" />
+          <span>K-means 五群中心</span>
+        </button>
+      </section>
+
+      <h2 class="section-title">小組分工</h2>
+      <section class="team" aria-label="小組分工">
+        <article class="mine">
+          <span>12130906</span>
+          <h2>邱悅媗</h2>
+          <p>關聯分析、Q&amp;A 出題</p>
+        </article>
+        <article>
+          <span>11133211</span>
+          <h2>簡郁樺</h2>
+          <p>製作 Word、PPT</p>
+        </article>
+        <article>
+          <span>12131715</span>
+          <h2>李筠婕</h2>
+          <p>群聚分析、Q&amp;A 出題</p>
+        </article>
+      </section>
+
+      <p class="note">
+        限制也寫在報告裡：樣本偏女性、資料量不大，男女差異不好比較；關聯規則曾出現大量重複，需要反覆前處理才比較能解讀。技術工具是問卷、Excel、Weka（Apriori、SimpleKMeans）。
+      </p>
+    </main>
+
+    <dialog id="viewer">
+      <button class="close-shot" type="button" aria-label="關閉">&times;</button>
+      <img alt="" />
+      <p></p>
+    </dialog>
+    <script>
+      (function () {
+        let href = location.href.split("#")[0].split("?")[0];
+        if (!href.endsWith("/")) {
+          href = /\.[a-z0-9]+$/i.test(href) ? href.replace(/[^/]+$/, "") : href + "/";
+        }
+        const script = document.createElement("script");
+        script.async = false;
+        script.src = href + "kimetsu.js";
+        document.body.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>

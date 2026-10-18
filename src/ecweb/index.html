@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電商平台｜邱悅媗</title>
+    <link rel="stylesheet" href="../style.min.css?v=19" />
+  </head>
+  <body class="ecweb">
+    <header class="top">
+      <a href="../index.html#contact">回作品集</a>
+      <strong>113 學年第 2 學期網頁程式設計期末專案</strong>
+    </header>
+    <main class="page">
+      <section class="intro">
+        <div class="intro-head">
+          <h1>電商平台</h1>
+          <div class="lede">
+            <p>
+              這是大二網頁程式設計的期末專案。用 ASP.NET Core MVC 做一個購物網站，可以註冊、依名稱和價格找商品、加入購物車、結帳，後台也能看營收、改訂單狀態，以及管理商品、類別和廠商。
+            </p>
+            <p>
+              會員帳號和商品訂單分成兩個 SQL Server 資料庫。網站要接資料庫才能跑，所以這裡放的是當時示範影片的畫面，沒有把整站掛到 GitHub Pages。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow" aria-label="網站可以做的事">
+        <article>
+          <span>前台</span>
+          <h2>找商品</h2>
+          <p>首頁有精選和最新上架。商品列表可以打關鍵字、設價格區間，也可以依類別看。</p>
+        </article>
+        <article>
+          <span>會員</span>
+          <h2>買東西</h2>
+          <p>註冊後要驗證信箱。登入才能把商品放進購物車。結帳時再檢查庫存，寫入訂單、扣庫存，並清空購物車。</p>
+        </article>
+        <article>
+          <span>後台</span>
+          <h2>管理</h2>
+          <p>只有 Admin 進得去。控制台統計商品、訂單、營收和熱銷，也可以改訂單狀態、維護分類廠商，以及調整會員角色。</p>
+        </article>
+      </section>
+
+      <section class="shots" aria-label="示範畫面">
+        <button class="shot" type="button">
+          <img src="../assets/ecweb/home.jpg" alt="首頁精選商品，有筆電、鍵盤和耳機" />
+          <span>首頁精選商品</span>
+        </button>
+        <button class="shot" type="button">
+          <img src="../assets/ecweb/catalog.jpg" alt="商品列表，可以用名稱、價格和分類篩選" />
+          <span>名稱、價格、分類篩選</span>
+        </button>
+        <button class="shot" type="button">
+          <img src="../assets/ecweb/cart.jpg" alt="購物車列出商品、數量、小計和總金額" />
+          <span>購物車，可改數量後去結帳</span>
+        </button>
+        <button class="shot" type="button">
+          <img src="../assets/ecweb/orders.jpg" alt="我的訂單頁面，列出兩筆已完成的訂單" />
+          <span>結帳後的我的訂單</span>
+        </button>
+        <button class="shot" type="button">
+          <img src="../assets/ecweb/dashboard.jpg" alt="管理控制台，有商品數、訂單數、營收和近期訂單" />
+          <span>後台控制台</span>
+        </button>
+        <button class="shot" type="button">
+          <img src="../assets/ecweb/manufacturers.jpg" alt="後台廠商列表，可以新增、編輯和查看" />
+          <span>後台廠商管理</span>
+        </button>
+      </section>
+
+      <p class="note">
+        技術是 ASP.NET Core 8、MVC、Identity、Entity Framework Core、SQL Server、Razor 和 Tailwind。畫面截自 2025 年 6 月的期末示範。
+      </p>
+    </main>
+
+    <dialog id="viewer">
+      <button class="close-shot" type="button" aria-label="關閉">&times;</button>
+      <img alt="" />
+      <p></p>
+    </dialog>
+    <script>
+      (function () {
+        let href = location.href.split("#")[0].split("?")[0];
+        if (!href.endsWith("/")) {
+          href = /\.[a-z0-9]+$/i.test(href) ? href.replace(/[^/]+$/, "") : href + "/";
+        }
+        const script = document.createElement("script");
+        script.async = false;
+        script.src = href + "ecweb.js";
+        document.body.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>
